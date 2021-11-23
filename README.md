@@ -1,4 +1,4 @@
-# 소프트웨어 전시회 참여하기 이전 하계 워크샵 프로젝트
+# 하계 워크샵 프로젝트
 ![image](https://user-images.githubusercontent.com/80818761/129051638-14b08c6a-1621-4ac1-acb7-ec2fdfd5f2bf.png)
 - 체크박스를 활용한 커스텀 리스트뷰로 만든 스케줄러
 1) 이를 위해서 특별히 필요한 것 Checkable 인터페이스를 implements 할 CheckableLinearLayout을 만든다.
