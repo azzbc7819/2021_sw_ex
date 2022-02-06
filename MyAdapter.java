@@ -8,6 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -66,5 +70,32 @@ public class MyAdapter extends BaseAdapter {
     public String getInfo(int i){
         return itemlist.get(i).getText().toString();
 
+    }
+
+    public static void copyDatabase(Context context){
+        String DB_PATH = "/data/data/" + context.getPackageName() + "/databases";
+
+        try{
+            File fDir = new File(DB_PATH);
+            if(!fDir.exists()){
+                fDir.mkdir();
+            }
+
+            String strOutFile = DB_PATH + "todolistapp.db";
+            InputStream inputStream = context.getAssets().open("todolistapp.db");
+            OutputStream outputStream = new FileOutputStream(strOutFile);
+
+            byte[] mBuffer = new byte[1024];
+            int mLength;
+            while((mLength = inputStream.read(mBuffer)) > 0){
+                outputStream.write(mBuffer,0,mLength);
+            }
+
+            outputStream.flush();
+            outputStream.close();
+            inputStream.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
