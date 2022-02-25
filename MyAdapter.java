@@ -51,6 +51,10 @@ public class MyAdapter extends BaseAdapter {
         return i;
     }
 
+    public long getRndId(int i){
+        return itemlist.get(i).getrndid();
+    }
+
     public Object getItem(int i){
         return itemlist.get(i);
     }
@@ -81,8 +85,8 @@ public class MyAdapter extends BaseAdapter {
                 fDir.mkdir();
             }
 
-            String strOutFile = DB_PATH + "todolistapp.db";
-            InputStream inputStream = context.getAssets().open("todolistapp.db");
+            String strOutFile = DB_PATH + "todolistapp_re.db";
+            InputStream inputStream = context.getAssets().open("todolistapp_re.db");
             OutputStream outputStream = new FileOutputStream(strOutFile);
 
             byte[] mBuffer = new byte[1024];
