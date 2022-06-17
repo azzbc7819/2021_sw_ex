@@ -7,5 +7,5 @@
 - 참고자료] 20210212깃허브업로드용.zip
 ![image](https://user-images.githubusercontent.com/80818761/152670116-2633970c-c39f-4be6-8222-50b32b4dd104.png)
 - DB로 할 일들 관리하기위해 DB Browser(SQLite)이용해서 DB 생성
-1) 프로젝트에 에셋으로 DB 추가 후 관련 코드로 내부에 복사
+1) 프로젝트에 에셋으로 DB 추가 후 관련 코드로 내부에 작성
 - 참고 블로그 : textbox.tistory.com/21?category=923312
